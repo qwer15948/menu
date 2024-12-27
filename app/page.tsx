@@ -6,11 +6,11 @@ export default function Home() {
       <main className="flex flex-col gap-4 row-start-2 items-center sm:items-start">
         <div className="flex gap-2 items-center flex-col text-center">
           <p className="text-2xl">이거 어때요?</p>
-          <p className="text-4xl">"김치찌개"</p>
+          <p className="text-4xl">{`"김치찌개"`}</p>
         </div>
         <div className="flex gap-2 text-center justify-center">
-          <button className="btn btn-primary">{"좋아 :)"}</button>
-          <button className="btn btn-secondary">{"싫어 :("}</button>
+          <button className="btn btn-primary">{`좋아 :)`}</button>
+          <button className="btn btn-secondary">{`싫어 :(`}</button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
