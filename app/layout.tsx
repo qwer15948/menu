@@ -15,7 +15,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [theme, setTheme] = useState("cupcake"); // 기본 테마: cupcake
+  const [theme, setTheme] = useState("autumn"); // 기본 테마
 
   useEffect(() => {
     // 사용자 OS의 다크 모드 설정 감지
@@ -23,11 +23,11 @@ export default function RootLayout({
 
     // 다크 모드 변경 시 처리
     const handleChange = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? "forest" : "cupcake");
+      setTheme(e.matches ? "dracula" : "autumn");
     };
 
     // 초기 모드 설정
-    setTheme(mediaQuery.matches ? "forest" : "cupcake");
+    setTheme(mediaQuery.matches ? "dracula" : "autumn");
 
     // 이벤트 리스너 추가
     mediaQuery.addEventListener("change", handleChange);
