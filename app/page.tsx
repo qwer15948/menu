@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,32 +9,15 @@ export default function Home() {
           <p className="text-2xl">이거 어때요?</p>
           <p className="text-4xl">{`"김치찌개"`}</p>
         </div>
-        <div className="flex gap-2 text-center justify-center">
+        <div className="flex gap-2 text-center justify-center w-full">
           <button className="btn btn-primary btn-sm">{`좋아 :)`}</button>
           <button className="btn btn-secondary btn-sm">{`싫어 :(`}</button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/menu"
+          className="flex gap-1 hover:underline-offset-2 hover:underline"
         >
           <Image
             aria-hidden
@@ -42,23 +26,8 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          메뉴 추가하기
+        </Link>
       </footer>
     </div>
   );
